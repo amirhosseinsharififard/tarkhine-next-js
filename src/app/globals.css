@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
 
 @font-face {
   font-family: 'Estedad';
@@ -153,7 +156,66 @@
   @apply text-[12px] font-bold;
 }
 
-
+/* تعریف کلاس‌های بریک‌پوینت برای lg */
+@media (min-width: 1024px) {
+  .lg\:text-display1 {
+    @apply text-[64px] font-bold leading-[140%];
+  }
+  .lg\:text-display2 {
+    @apply text-[56px] font-bold leading-[140%];
+  }
+  .lg\:text-h1 {
+    @apply text-[44px] font-bold leading-[140%];
+  }
+  .lg\:text-h2 {
+    @apply text-[40px] font-bold leading-[140%];
+  }
+  .lg\:text-h3 {
+    @apply text-[32px] font-bold leading-[140%];
+  }
+  .lg\:text-h4 {
+    @apply text-[24px] font-bold leading-[140%];
+  }
+  .lg\:text-h5 {
+    @apply text-[20px] font-bold leading-[140%];
+  }
+  .lg\:text-h6 {
+    @apply text-[16px] font-semibold leading-[180%];
+  }
+  .lg\:text-bodyXL {
+    @apply text-[20px] font-normal leading-[180%];
+  }
+  .lg\:text-bodyLG {
+    @apply text-[18px] font-normal leading-[180%];
+  }
+  .lg\:text-bodyMD {
+    @apply text-[12px] font-normal leading-[180%];
+  }
+  .lg\:text-bodySM {
+    @apply text-[14px] font-normal leading-[180%];
+  }
+  .lg\:text-captionMD {
+    @apply text-[12px] font-normal leading-[180%];
+  }
+  .lg\:text-captionLG {
+    @apply text-[14px] font-bold leading-[180%];
+  }
+  .lg\:text-captionSM {
+    @apply text-[10px] font-bold leading-[180%];
+  }
+  .lg\:text-buttonLG {
+    @apply text-[16px] font-medium leading-[180%];
+  }
+  .lg\:text-buttonSM {
+    @apply text-[14px] font-medium;
+  }
+  .lg\:text-overlineLG {
+    @apply text-[16px] font-normal leading-[180%];
+  }
+  .lg\:text-overlineSM {
+    @apply text-[12px] font-bold;
+  }
+}
 
 body {
   padding: 0;

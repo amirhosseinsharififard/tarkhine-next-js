@@ -93,102 +93,11 @@ module.exports = {
         120: "120px ",
         160: "160px ",
       },
-      text: {
-        display1: {
-          fontSize: "64px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        display2: {
-          fontSize: "56px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h1: {
-          fontSize: "44px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h2: {
-          fontSize: "40px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h3: {
-          fontSize: "32px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h4: {
-          fontSize: "24px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h5: {
-          fontSize: "20px",
-          fontWeight: "bold",
-          lineHeight: "140%",
-        },
-        h6: {
-          fontSize: "16px",
-          fontWeight: "semibold",
-          lineHeight: "180%",
-        },
-        bodyXL: {
-          fontSize: "20px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        bodyLG: {
-          fontSize: "18px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        bodyMD: {
-          fontSize: "12px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        bodySM: {
-          fontSize: "14px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        captionMD: {
-          fontSize: "12px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        captionLG: {
-          fontSize: "14px",
-          fontWeight: "bold",
-          lineHeight: "180%",
-        },
-        captionSM: {
-          fontSize: "10px",
-          fontWeight: "bold",
-          lineHeight: "180%",
-        },
-        buttonLG: {
-          fontSize: "16px",
-          fontWeight: "medium",
-          lineHeight: "180%",
-        },
-        buttonSM: {
-          fontSize: "14px",
-          fontWeight: "medium",
-        },
-        overlineLG: {
-          fontSize: "16px",
-          fontWeight: "regular",
-          lineHeight: "180%",
-        },
-        overlineSM: {
-          fontSize: "12px",
-          fontWeight: "bold",
-          lineHeight: "auto%",
-        },
-      },
+     
+      // fontSize: {
+      //   h2: ["40px", { lineHeight: "140%", fontWeight: "bold" }],
+      //   h6: ["16px", { lineHeight: "180%", fontWeight: "600" }],
+      // },
     },
   },
   plugins: [],

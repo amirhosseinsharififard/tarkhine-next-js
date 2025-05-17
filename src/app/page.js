@@ -1,10 +1,7 @@
-import Header from "@/components/layout/Header";
+import HomePage from "@/components/template/HomePage";
 
-export default function Home() {
-  return (
-    <>
-      <Header />
-      s
-    </>
-  );
-}
+const Home = () => {
+  return <HomePage />;
+};
+
+export default Home;
