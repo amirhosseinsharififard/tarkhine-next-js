@@ -1,0 +1,76 @@
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.swiper-pagination {
+  position: absolute;
+  bottom:0!important; /* فاصله از پایین */
+  left: 50%!important; /* انتقال به مرکز افقی */
+  transform: translateX(-50%); /* جبران انتقال برای مرکز */
+  display: flex;
+  justify-content: center; /* مرکز کردن bulletها */
+  align-items: center;
+  width: fit-content !important; /* طول به اندازه محتوای داخلی */
+  padding: 5px 10px; /* فاصله داخلی */
+  border-radius: 10px; /* گرد کردن گوشه‌ها (اختیاری) */
+  box-sizing: border-box; /* اطمینان از محاسبه padding در عرض */
+}
+
+
+
+.swiper-pagination-bullet {
+    
+  width: 8px;
+  height: 8px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+background: #ADADAD;
+}
+
+.swiper-pagination-bullet-active {
+    width: 12px;
+  height: 12px;
+  background: #417F56;
+}
+
+
+@media (max-width: 1024px) {
+
+  .swiper-pagination-bullet {
+  width: 4px;
+  height: 4px;
+
+  }
+
+.swiper-pagination-bullet-active {
+    width: 8px;
+  height: 8px;
+}
+}

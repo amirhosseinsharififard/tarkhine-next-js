@@ -1,16 +1,15 @@
 import Image from "next/image";
-import { SwiperSlide } from "swiper/react";
 
 const SwiperSliderComponent = ({ data }) => {
   return (
-      <div className=' w-full h-auto relative'>
+      <div className=' w-full h-auto relative '>
         <Image src={data} alt='SliderHomeImage' />
         <div className='bg-[rgba(0,0,0,55%)] absolute top-0 right-0 h-full w-full'>
           <div className='bg-[rgba(33,64,43,5%)] absolute top-0 right-0 h-full w-full flex flex-col justify-evenly items-center content-evenly'>
             <p className='text-neutral-white text-h6 lg:text-h2 md:text-h6 '>
               تجربه عذای سالم و گیاهی به سبک ترخینه
             </p>
-            <button className='bg-main-primary text-neutral-white text-buttonSM p-8 lg:px-32 lg:text-buttonLG rounded-4 cursor-pointer'>
+            <button className='bg-main-primary text-neutral-white text-buttonSM p-8 lg:px-32 lg:text-buttonLG rounded-4 cursor-pointer mb-7'>
               سفارش انلاین غذا
             </button>
           </div>
