@@ -10,6 +10,7 @@
       "@/template/*": ["./src/components/template/*"],
       "@/provider/*": ["./src/provider/*"],
       "@/utils/*": ["./src/utils/*"],
+      "@/public/*": ["./public/*"],
     }
   }
 }
