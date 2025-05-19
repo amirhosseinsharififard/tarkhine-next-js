@@ -1,6 +1,6 @@
 import footerImage from "@/public/images/FooterImage.png";
 import Image from "next/image";
-import Input from "../module/Input";
+import CustomeInput from "../ui/CustomeInput";
 
 const Footer = () => {
   return (
@@ -49,9 +49,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <form>
-            <Input />
+            <CustomeInput />
           </form>
         </div>
       </div>

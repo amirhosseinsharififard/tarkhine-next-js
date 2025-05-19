@@ -1,4 +1,4 @@
-const Input = ({
+const CustomeInput = ({
   placeHolder = "placeholder",
   height,
   width,
@@ -67,4 +67,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default CustomeInput;
