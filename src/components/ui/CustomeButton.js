@@ -1,5 +1,9 @@
 "use client";
+
+import CustomeSpinner from "./CustomeSpinner";
+
 const CustomeButton = ({
+  children,
   height,
   width,
   selected,
@@ -136,8 +140,11 @@ const CustomeButton = ({
 
 
         `}>
-        سفارش غذا
-      </button>
+
+{
+  isLoading? <CustomeSpinner/>:
+  {children}
+}      </button>
   );
 };
 

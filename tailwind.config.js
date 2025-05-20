@@ -93,11 +93,8 @@ module.exports = {
         120: "120px ",
         160: "160px ",
       },
-     
-      // fontSize: {
-      //   h2: ["40px", { lineHeight: "140%", fontWeight: "bold" }],
-      //   h6: ["16px", { lineHeight: "180%", fontWeight: "600" }],
-      // },
+
+ 
     },
   },
   plugins: [],
