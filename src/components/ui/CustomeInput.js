@@ -4,7 +4,8 @@ const CustomeInput = ({
   width,
   error,
   disabled,
-  textarea ,
+  textarea,
+  placeHolderColor = false,
 }) => {
   const haightSize = {
     32: 32,
@@ -59,6 +60,8 @@ const CustomeInput = ({
             outline-none  
             h-[${(height && haightSize[height]) || 32}px]
             w-[${(width && "336") || 330}px]
+            ${placeHolderColor && "placeholder:text-neutral-gray8"}
+
             `}
           disabled={disabled}
         />
