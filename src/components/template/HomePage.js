@@ -1,6 +1,7 @@
 
 
 import SliderHomeImage from "../../../public/images/SliderHomeImage.png";
+import SwiperSlider from "../module/Swiper";
 
 
 const HomePage = () => {

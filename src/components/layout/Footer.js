@@ -49,8 +49,18 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <form className="hidden lg:block">
-            <CustomeInput />
+          <form className='hidden lg:block'>
+            <h3>پیام به ترخینه</h3>
+            <div className='flex jus'>
+              <div>
+                <CustomeInput />
+                <CustomeInput />
+                <CustomeInput />
+              </div>
+              <div>
+                <CustomeInput textarea={true} />
+              </div>
+            </div>
           </form>
         </div>
       </div>

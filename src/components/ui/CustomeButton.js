@@ -3,12 +3,14 @@
 import CustomeSpinner from "./CustomeSpinner";
 
 const CustomeButton = ({
-  children,
   height,
   width,
   selected,
   model,
   disabled = false,
+  isLoading = false,
+  children,
+  onClick,
 }) => {
   const heightSize = {
     32: "h-[32px]",
@@ -123,28 +125,20 @@ const CustomeButton = ({
   };
 
   return (
-      <button
-        className={`
+    <button
+      className={`
         py-[4px]
         px-[8px] 
         rounded-4 
         text-captionMD
         cursor-pointer
-   
-        
-
         ${height ? heightSize[height] : "h-[32px]"}
         ${width ? "w-[174px]" : "w-[114px]"}
         ${getModelButtonClass(model, selected, disabled)}
-
-
-
-        `}>
-
-{
-  isLoading? <CustomeSpinner/>:
-  {children}
-}      </button>
+        `}
+      onClick={onClick}>
+      {isLoading ? <CustomeSpinner /> : children}
+    </button>
   );
 };
 
