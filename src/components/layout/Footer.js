@@ -1,7 +1,13 @@
 import footerImage from "@/public/images/FooterImage.png";
 import Image from "next/image";
 import CustomeInput from "../ui/CustomeInput";
+import CustomeButton from "../ui/CustomeButton";
+import Link from "next/link";
 
+// icons
+import { LuTwitter } from "react-icons/lu";
+import { FaInstagram } from "react-icons/fa6";
+import { TbBrandTelegram } from "react-icons/tb";
 const Footer = () => {
   return (
     <div className='max-w-screen-xl mx-auto' dir='rtl'>
@@ -24,42 +30,72 @@ const Footer = () => {
         {/* Content */}
         <div className='text-neutral-white mx-[20px] lg:mx-[5rem] py-[1rem] lg:py-[2rem] flex '>
           <div className='w-1/2 lg:w-1/4'>
-            <h4 className='text-captionMD'>دسترسی آسان</h4>
-            <ul className='text-captionMD space-y-2'>
-              <li>پرسش و پاسخ</li>
-              <li>پرسش و پاسخ</li>
-              <li>پرسش و پاسخ</li>
+            <h4 className='text-captionMD lg:text-h5 mb-8 lg:mb-16 '>
+              دسترسی آسان
+            </h4>
+
+            <ul className='text-captionSM lg:text-captionMD space-y-2 gap-[8px] lg:gap-[16px]'>
+              <li>
+                <Link href='/'>پرسش متداول</Link>
+              </li>
+              <li>
+                <Link href='/'>قوانین ترخینه</Link>
+              </li>
+              <li>
+                <Link href='/'>حریم خصوصی</Link>
+              </li>
               <li className='flex gap-2'>
-                <span>icon</span>
-                <span>icon</span>
-                <span>icon</span>
+                <Link href={"/"}>
+                  <span>
+                    <LuTwitter className='w-16 h-16 lg:w-24 lg:h-24 ' />
+                  </span>
+                </Link>
+                <Link href={"/"}>
+                  <span>
+                    <FaInstagram className='w-16 h-16 lg:w-24 lg:h-24 ' />
+                  </span>
+                </Link>
+                <Link href={"/"}>
+                  <span>
+                    <TbBrandTelegram className='w-16 h-16 lg:w-24 lg:h-24 ' />
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
           <div className='w-1/2 lg:w-1/4'>
-            <h4 className='text-captionMD'>دسترسی آسان</h4>
-            <ul className='text-captionMD space-y-2'>
-              <li>پرسش و پاسخ</li>
-              <li>پرسش و پاسخ</li>
-              <li>پرسش و پاسخ</li>
-              <li className='flex gap-2'>
-                <span>icon</span>
-                <span>icon</span>
-                <span>icon</span>
+            <h4 className='text-captionMD lg:text-h5 mb-8 lg:mb-16 '>
+              دسترسی آسان
+            </h4>
+            <ul className='text-captionSM  lg:text-captionMD space-y-2 gap-[8px] lg:gap-[16px]'>
+              <li>
+                <Link href='/'>شعبه اکباتان</Link>
+              </li>
+              <li>
+                <Link href='/'>شعبه چالوس</Link>
+              </li>
+              <li>
+                <Link href='/'>شعبه اقدسیه</Link>
+              </li>
+              <li>
+                <Link href='/'>شعبه ونک</Link>
               </li>
             </ul>
           </div>
           <form className='hidden lg:block'>
-            <h3>پیام به ترخینه</h3>
-            <div className='flex jus'>
-              <div>
-                <CustomeInput />
-                <CustomeInput />
-                <CustomeInput />
+            <h3 className='mb-16 text-h5'>پیام به ترخینه</h3>
+            <div className='flex justify-center items-center gap-[26px]'>
+              <div className='flex flex-col content-between  gap-[12px]'>
+                <CustomeInput placeHolder='نام و نام خانوادگی' height={40} />
+                <CustomeInput placeHolder='شماره تماس' height={40} />
+                <CustomeInput placeHolder='آدرس ایمیل (اختیاری)' height={40} />
               </div>
               <div>
-                <CustomeInput textarea={true} />
+                <CustomeInput placeHolder='پیام شما' textarea={true} />
               </div>
+            </div>
+            <div className='flex flex-row-reverse mt-16'>
+              <CustomeButton model={"strokeWhite"}>ارسال پیام</CustomeButton>
             </div>
           </form>
         </div>
