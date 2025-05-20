@@ -49,7 +49,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <form>
+          <form className="hidden lg:block">
             <CustomeInput />
           </form>
         </div>
