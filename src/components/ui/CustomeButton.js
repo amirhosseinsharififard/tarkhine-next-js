@@ -7,10 +7,10 @@ const CustomeButton = ({
   disabled = false,
 }) => {
   const heightSize = {
-    32: 'h-[32px]',
-    40: 'h-[40px]',
-    48: 'h-[48px]',
-    56: 'h-[56px]',
+    32: "h-[32px]",
+    40: "h-[40px]",
+    48: "h-[48px]",
+    56: "h-[56px]",
   };
 
   const getModelButtonClass = (model, selected, disabled) => {
@@ -119,10 +119,9 @@ const CustomeButton = ({
   };
 
   return (
-    <div className=''>
       <button
         className={`
-        py-[4px] 
+        py-[4px]
         px-[8px] 
         rounded-4 
         text-captionMD
@@ -139,7 +138,6 @@ const CustomeButton = ({
         `}>
         سفارش غذا
       </button>
-    </div>
   );
 };
 
