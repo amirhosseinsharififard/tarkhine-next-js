@@ -11,4 +11,9 @@ const sp = (number) => {
   return e2p(joinedNumber);
 };
 
-export { e2p, p2e, sp };
+function formatPrice(number) {
+  if(typeof number !== "number") return ""
+  return new Intl.NumberFormat("fa-IR").format(number) ;
+}
+
+export { e2p, p2e, sp, formatPrice };

@@ -34,7 +34,10 @@ const SwiperSlider = ({ slider = "bigSlider" }) => {
       }}
       loop={isPaginationFalse}
       modules={[EffectFade, Navigation, Pagination, Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}>
+      onSwiper={(swiper) => console.log(swiper)}
+      
+      className="h-full"
+      >
       {/* first Slider */}
       {slider == "bigSlieder" &&
         slicedData.map((item, index) => (
@@ -56,7 +59,9 @@ const SwiperSlider = ({ slider = "bigSlider" }) => {
       {/* second Slider */}
       {slider == "cardSlider" &&
         slicedData.map((item, index) => (
-          <SwiperSlide key={index} className='!w-[168px]'>
+          <SwiperSlide
+            key={index}
+            className='!w-[clamp(168px,25vw,288px)] max-w-[288px] h-[clamp(231px, 25vw,433px)] max-h-[433px]'>
             <CardFood />
           </SwiperSlide>
         ))}

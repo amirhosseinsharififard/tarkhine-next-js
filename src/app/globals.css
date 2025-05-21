@@ -111,7 +111,9 @@
 .text-h6 {
   @apply text-[16px] font-semibold leading-[180%];
 }
-
+.text-h7 {
+  @apply text-[20px] font-normal leading-[180%];
+}
 .text-bodyXL {
   @apply text-[20px] font-normal leading-[180%];
 }
@@ -189,7 +191,9 @@
   .lg\:text-h6 {
     @apply text-[16px] font-semibold leading-[180%];
   }
-
+ .lg\:text-h7 {
+    @apply text-[20px] font-normal leading-[180%];
+  }
   .lg\:text-bodyXL {
     @apply text-[20px] font-normal leading-[180%];
   }
