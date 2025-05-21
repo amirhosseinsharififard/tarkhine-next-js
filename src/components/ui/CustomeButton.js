@@ -4,19 +4,20 @@ import CustomeSpinner from "./CustomeSpinner";
 
 const CustomeButton = ({
   height = "h-[40px]", // ارتفاع پیش‌فرض
-  width = "w-auto",   // عرض پیش‌فرض
+  width = "w-auto", // عرض پیش‌فرض
   selected,
   model,
   disabled = false,
   isLoading = false,
   children,
   onClick,
-  textSize , // سایز متن پیش‌فرض
+  textSize, // سایز متن پیش‌فرض
 }) => {
   const getModelButtonClass = (model, selected, disabled) => {
     switch (model) {
       case "stroke":
-        if (disabled) return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
+        if (disabled)
+          return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
         return `
           border 
           border-main-primary
@@ -44,7 +45,8 @@ const CustomeButton = ({
         `;
 
       case "strokeWhite":
-        if (disabled) return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
+        if (disabled)
+          return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
         return `
           border 
           border-neutral-white
@@ -63,7 +65,8 @@ const CustomeButton = ({
         `;
 
       case "fillBlack":
-        if (disabled) return "bg-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
+        if (disabled)
+          return "bg-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
         return `
           text-neutral-white 
           bg-neutral-gray7
@@ -72,7 +75,8 @@ const CustomeButton = ({
         `;
 
       case "strokeBlack":
-        if (disabled) return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
+        if (disabled)
+          return "border border-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
         return `
           border 
           border-neutral-gray7
@@ -91,7 +95,8 @@ const CustomeButton = ({
         `;
 
       default:
-        if (disabled) return "bg-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
+        if (disabled)
+          return "bg-neutral-gray3 text-neutral-gray4 cursor-not-allowed";
         return `
           text-neutral-white 
           bg-main-primary
@@ -113,10 +118,9 @@ const CustomeButton = ({
         ${width}
         ${getModelButtonClass(model, selected, disabled)}
         text-captionMD
- lg:text-ButtonLG
+        lg:text-buttonLG
       `}
-      onClick={onClick}
-    >
+      onClick={onClick}>
       {isLoading ? <CustomeSpinner /> : children}
     </button>
   );
