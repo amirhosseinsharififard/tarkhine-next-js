@@ -10,12 +10,27 @@ import FoodImage from "@/public/images/foodPicture.png";
 import { formatPrice } from "@/utils/replaceNumber";
 const CardFood = () => {
   return (
-    <div className='w-full h-full flex flex-col overflow-hidden border-1 rounded-4 border-neutral-gray4 pb-8 '>
-      <Image
-        src={FoodImage}
-        alt='Image'
-        className='bg-amber-800 w-full h-[clamp(109px, 25vw,256px)] max-h-[256px] '
-      />
+    <div className='w-full h-full flex flex-col overflow-hidden border-1 rounded-4 border-neutral-gray4 pb-8 bg-neutral-white '>
+      {/* <div className="w-full h-[clamp(109px,30vw,256px)] rounded-t-lg overflow-hidden relative">
+  <Image
+    src={FoodImage}
+    alt="دلمه بزرگ کلم"
+    className="w-full h-full object-cover"
+    priority
+    fill
+    sizes="(max-width: 1024px) 100vw, 288px"
+  />
+</div> */}
+      <div className='w-full h-[clamp(109px,30vw,256px)]   rounded-t-lg overflow-hidden relative'>
+        <Image
+          src={FoodImage}
+          alt='Image'
+          fill
+           priority
+           sizes="(max-width: 1024px) 100vw, 288px"
+          className='h-full w-full object-cover '
+        />
+      </div>
 
       <div className='flex flex-col justify-evenly content-evenly  px-8 pb-8 gap-1 '>
         <h3 className='text-captionMD lg:text-h7'>دلمه بزرگ کلم</h3>
@@ -52,9 +67,7 @@ const CardFood = () => {
         </div>
       </div>
       <div className='px-8'>
-        <CustomeButton
-          width={"w-full"}
-          textSize={""}>
+        <CustomeButton width={"w-full"} textSize={""}>
           افزودن به سبد خرید
         </CustomeButton>
       </div>

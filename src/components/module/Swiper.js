@@ -7,6 +7,8 @@ import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./swiperStyle.css";
+import "swiper/css/navigation";
+
 // data
 import SwiperSliderComponent from "./SwiperSliderComponent";
 import rectangle from "../../../public/images/Rectangle2.svg";
@@ -14,10 +16,10 @@ import rectangle from "../../../public/images/Rectangle2.svg";
 import Image from "next/image";
 import CardFood from "./CardFood";
 
-const SwiperSlider = ({ slider = "bigSlider" }) => {
+const SwiperSlider = ({ slider }) => {
   const slicedData = [0, 1, 2, 3, 4, 5];
 
-  const perView = slider == "cardSlider" ? "auto" : 1;
+  const perView = slider ? "auto" : 1;
   const isPaginationFalse = slider == "cardSlider" ? false : true;
   const pagination = {
     clickable: true,
@@ -27,19 +29,23 @@ const SwiperSlider = ({ slider = "bigSlider" }) => {
       spaceBetween={16}
       slidesPerView={perView}
       pagination={isPaginationFalse}
+      className={`${
+        slider === "bigSlider" ? "big-slider" : "card-slider"
+      } h-full`}
+      navigation={{
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
-      loop={isPaginationFalse}
+      loop={true}
       modules={[EffectFade, Navigation, Pagination, Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}
-      
-      className="h-full"
-      >
+      onSwiper={(swiper) => console.log(swiper)}>
       {/* first Slider */}
-      {slider == "bigSlieder" &&
+      {slider === "bigSlider" &&
         slicedData.map((item, index) => (
           <SwiperSlide key={index}>
             <SwiperSliderComponent />
@@ -61,10 +67,13 @@ const SwiperSlider = ({ slider = "bigSlider" }) => {
         slicedData.map((item, index) => (
           <SwiperSlide
             key={index}
-            className='!w-[clamp(168px,25vw,288px)] max-w-[288px] h-[clamp(231px, 25vw,433px)] max-h-[433px]'>
+            className='w-[clamp(168px,25vw,288px)] max-w-[288px] h-[clamp(231px, 25vw,433px)] max-h-[433px]'>
             <CardFood />
           </SwiperSlide>
         ))}
+
+      <div className='swiper-button-prev' />
+      <div className='swiper-button-next' />
     </Swiper>
   );
 };

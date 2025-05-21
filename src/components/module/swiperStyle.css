@@ -74,3 +74,30 @@ background: #ADADAD;
   height: 8px;
 }
 }
+
+
+   .big-slider .swiper-button-prev, .big-slider .swiper-button-next{
+    color: white;
+
+  }
+
+
+
+  .card-slider .swiper-button-prev,
+.card-slider .swiper-button-next {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: #CBCBCB;
+
+}
+
+
+
+
+.card-slider .swiper-button-prev::after ,
+.card-slider .swiper-button-next::after {
+font-size: 25;
+  margin: auto  ;
+}
