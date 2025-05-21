@@ -1,10 +1,10 @@
 import Image from "next/image";
 import CustomeButton from "../ui/CustomeButton";
-
-const SwiperSliderComponent = ({ data }) => {
+import SliderHomeImage from '@/public/images/SliderHomeImage.png'
+const SwiperSliderComponent = ({  }) => {
   return (
     <div className=' w-full h-auto relative '>
-      <Image src={data} alt='SliderHomeImage' />
+      <Image src={SliderHomeImage} alt='SliderHomeImage' />
       <div className='bg-[rgba(0,0,0,55%)] absolute top-0 right-0 h-full w-full'>
         <div className='bg-[rgba(33,64,43,5%)] absolute top-0 right-0 h-full w-full flex flex-col justify-evenly items-center content-evenly'>
           <p className='text-neutral-white text-h6 lg:text-h2 md:text-h6 '>

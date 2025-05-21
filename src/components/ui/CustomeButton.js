@@ -124,6 +124,7 @@ const CustomeButton = ({
     }
   };
 
+  const widthSize = width;
   return (
     <button
       className={`
@@ -133,7 +134,7 @@ const CustomeButton = ({
         text-captionMD
         cursor-pointer
         ${height ? heightSize[height] : "h-[32px]"}
-        ${width ? "w-[174px]" : "w-[114px]"}
+        ${widthSize}
         ${getModelButtonClass(model, selected, disabled)}
         `}
       onClick={onClick}>
