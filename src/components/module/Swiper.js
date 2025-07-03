@@ -72,8 +72,8 @@ const SwiperSlider = ({ slider }) => {
           </SwiperSlide>
         ))}
 
-      <div className='swiper-button-prev' />
-      <div className='swiper-button-next' />
+      <div className='hidden lg:swiper-button-prev' />
+      <div className='hidden lg:swiper-button-next' />
     </Swiper>
   );
 };
