@@ -6,6 +6,7 @@ import CustomeInput from "../ui/CustomeInput";
 import { IoSearchOutline } from "react-icons/io5";
 import Image from "next/image";
 import noteSvg from "../../../public/images/note.svg";
+import BranchesShop from "../module/BranchesShop";
 
 const HomePage = () => {
   return (
@@ -30,6 +31,10 @@ const HomePage = () => {
           </div>
         </CustomeButton>
       </div>
+
+      <BranchesShop />
+
+      
     </div>
   );
 };

@@ -16,7 +16,7 @@ import rectangle from "../../../public/images/Rectangle2.svg";
 import Image from "next/image";
 import CardFood from "./CardFood";
 
-const SwiperSlider = ({ slider }) => {
+const SwiperSlider = ({ slider, branch }) => {
   const slicedData = [0, 1, 2, 3, 4, 5];
 
   const perView = slider ? "auto" : 1;
@@ -28,7 +28,7 @@ const SwiperSlider = ({ slider }) => {
     <Swiper
       spaceBetween={16}
       slidesPerView={perView}
-      pagination={isPaginationFalse}
+      pagination={isPaginationFalse && !branch}
       className={`${
         slider === "bigSlider" ? "big-slider" : "card-slider"
       } h-full`}
@@ -43,21 +43,23 @@ const SwiperSlider = ({ slider }) => {
       }}
       loop={true}
       modules={[EffectFade, Navigation, Pagination, Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}>
+      onSwiper={(swiper) => console.log(swiper)}
+    >
       {/* first Slider */}
       {slider === "bigSlider" &&
+        !branch &&
         slicedData.map((item, index) => (
           <SwiperSlide key={index}>
             <SwiperSliderComponent />
           </SwiperSlide>
         ))}
       {/* first Slider */}
-      {slider == "bigSlider" && (
-        <div className='absolute bottom-[-2px] left-1/2 transform -translate-x-1/2 z-2 flex justify-center w-25 lg:w-30 h-10'>
+      {slider == "bigSlider" && !branch && (
+        <div className="absolute bottom-[-2px] left-1/2 transform -translate-x-1/2 z-2 flex justify-center w-25 lg:w-30 h-10">
           <Image
             src={rectangle}
-            alt='rectandle'
-            className='absolute bottom-0 w-full '
+            alt="rectandle"
+            className="absolute bottom-0 w-full "
           />
         </div>
       )}
@@ -67,13 +69,26 @@ const SwiperSlider = ({ slider }) => {
         slicedData.map((item, index) => (
           <SwiperSlide
             key={index}
-            className='w-[clamp(168px,25vw,288px)] max-w-[288px] h-[clamp(231px, 25vw,433px)] max-h-[433px]'>
+            className="w-[clamp(168px,25vw,288px)] max-w-[288px] h-[clamp(231px, 25vw,433px)] max-h-[433px]"
+          >
             <CardFood />
           </SwiperSlide>
         ))}
 
-      <div className='hidden lg:swiper-button-prev' />
-      <div className='hidden lg:swiper-button-next' />
+      {slider === "bigSlider" &&
+        branch &&
+        slicedData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <SwiperSliderComponent branch={branch} />
+          </SwiperSlide>
+        ))}
+
+      {slider === "bigSlider" && (
+        <>
+          <div className="swiper-button-prev" />
+          <div className="swiper-button-next" />
+        </>
+      )}
     </Swiper>
   );
 };
