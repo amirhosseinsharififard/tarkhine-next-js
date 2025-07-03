@@ -11,17 +11,8 @@ import { formatPrice } from "@/utils/replaceNumber";
 const CardFood = () => {
   return (
     <div className='w-full h-full flex flex-col overflow-hidden border-1 rounded-4 border-neutral-gray4 pb-8 bg-neutral-white '>
-      {/* <div className="w-full h-[clamp(109px,30vw,256px)] rounded-t-lg overflow-hidden relative">
-  <Image
-    src={FoodImage}
-    alt="دلمه بزرگ کلم"
-    className="w-full h-full object-cover"
-    priority
-    fill
-    sizes="(max-width: 1024px) 100vw, 288px"
-  />
-</div> */}
-      <div className='w-full h-[clamp(109px,30vw,256px)]   rounded-t-lg overflow-hidden relative'>
+      
+      <div className='w-full h-[clamp(109px,30vw,256px)]  overflow-hidden relative'>
         <Image
           src={FoodImage}
           alt='Image'
@@ -58,10 +49,10 @@ const CardFood = () => {
               <IoStar className='w-16 h-16 text-status-warning-l cursor-pointer' />
             </span>
             <p className='text-captionSM'>{formatPrice(5)}</p>
-            <p className='hidden lg:block text-neutral-gray5 text-captionSM'>{`(${53}امتیاز)`}</p>
+            <p className='hidden lg:block text-neutral-gray5 text-captionSM'>{`(${formatPrice(53)}امتیاز)`}</p>
           </div>
 
-          <div className='flex justify-between text-captionSM lg:text-bodyMD'>
+          <div className='flex justify-between text-captionSM lg:text-bodyMD text-neutral-gray8'>
             <p>{formatPrice(200000)} تومان</p>
           </div>
         </div>
