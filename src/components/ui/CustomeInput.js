@@ -16,7 +16,9 @@ const CustomeInput = ({
 
   const widthClass = width ? "w-[336px]" : "w-[330px]";
   const heightClass = height ? `h-[${heightSize[height]}px]` : "h-[32px]";
-  const errorClass = error ? "border-status-error focus:border-status-error" : "";
+  const errorClass = error
+    ? "border-status-error focus:border-status-error"
+    : "";
   const baseClasses = `
     border 
     px-3
@@ -24,15 +26,18 @@ const CustomeInput = ({
     rounded
     border-neutral-gray7
     active:border-main-primary
+    
     focus:border-main-primary
     disabled:border-neutral-gray7
     outline-none
-    placeholder-neutral-white
+    placeholder-neutral-gray8
+    text-neutral-gray8
+    text-captionSM
   `;
 
   const searchClasses = search
     ? "text-neutral-black placeholder:text-neutral-gray8 border-none"
-    : "text-neutral-white hover:border-neutral-white";
+    : " text-neutral-gray8   hover:border-neutral-gray8 ";
 
   switch (true) {
     case textarea:

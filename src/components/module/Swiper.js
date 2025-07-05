@@ -65,7 +65,6 @@ const SwiperSlider = ({ slider, branch }) => {
       }}
       loop={true}
       modules={[EffectFade, Navigation, Pagination, Autoplay]}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {/* first Slider */}
       {slider === "bigSlider" &&
