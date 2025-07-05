@@ -7,6 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import Image from "next/image";
 import noteSvg from "../../../public/images/note.svg";
 import BranchesShop from "../module/BranchesShop";
+import Comments from "../module/Comments";
 
 const HomePage = () => {
   return (
@@ -34,7 +35,7 @@ const HomePage = () => {
 
       <BranchesShop />
 
-      
+      <Comments />
     </div>
   );
 };

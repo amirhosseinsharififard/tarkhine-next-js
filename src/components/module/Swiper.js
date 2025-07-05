@@ -15,19 +15,33 @@ import rectangle from "../../../public/images/Rectangle2.svg";
 
 import Image from "next/image";
 import CardFood from "./CardFood";
+import CardComment from "./CardComment";
 
 const SwiperSlider = ({ slider, branch }) => {
   const slicedData = [0, 1, 2, 3, 4, 5];
 
-  const perView = slider ? "auto" : 1;
-  const isPaginationFalse = slider == "cardSlider" ? false : true;
+  const getBreakpoints = () => {
+    if (slider === "comments") {
+      return {
+        640: { slidesPerView: 1.5 },
+        1024: { slidesPerView: 2 },
+      };
+    }
+    return {
+      640: { slidesPerView: 1 },
+      1024: { slidesPerView: "auto" },
+    };
+  };
   const pagination = {
     clickable: true,
   };
+  const breakpoints = getBreakpoints();
+  const isPaginationFalse = slider == "cardSlider" ? false : true;
+
   return (
     <Swiper
       spaceBetween={16}
-      slidesPerView={perView}
+      slidesPerView={breakpoints}
       pagination={isPaginationFalse && !branch}
       className={`${
         slider === "bigSlider" ? "big-slider" : "card-slider"
@@ -35,6 +49,14 @@ const SwiperSlider = ({ slider, branch }) => {
       navigation={{
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: slider === "comments" ? 2 : 1,
+        },
+        1024: {
+          slidesPerView: slider === "comments" ? 2 : "auto",
+        },
       }}
       autoplay={{
         delay: 2500,
@@ -82,6 +104,50 @@ const SwiperSlider = ({ slider, branch }) => {
             <SwiperSliderComponent branch={branch} />
           </SwiperSlide>
         ))}
+
+      {slider === "comments" && (
+        <>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+          <SwiperSlide>
+            <CardComment />
+          </SwiperSlide>
+        </>
+      )}
 
       {slider === "bigSlider" && (
         <>

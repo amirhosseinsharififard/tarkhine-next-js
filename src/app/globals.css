@@ -7,73 +7,73 @@
 @import "tailwindcss/utilities"; */
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Thin.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Thin.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Thin.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-ExtraLight.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-ExtraLight.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-ExtraLight.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Light.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Light.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Light.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Regular.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Regular.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Regular.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Medium.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Medium.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Medium.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-SemiBold.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-SemiBold.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-SemiBold.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Bold.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Bold.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Bold.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-ExtraBold.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-ExtraBold.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-ExtraBold.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Estedad';
-  src: url('/fonts/webfonts/statics/Estedad-Black.woff2') format('woff2'),
-    url('/fonts/ttf/Estedad-Black.ttf') format('truetype');
+  font-family: "Estedad";
+  src: url("/fonts/webfonts/statics/Estedad-Black.woff2") format("woff2"),
+    url("/fonts/ttf/Estedad-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
@@ -191,7 +191,7 @@
   .lg\:text-h6 {
     @apply text-[16px] font-semibold leading-[180%];
   }
- .lg\:text-h7 {
+  .lg\:text-h7 {
     @apply text-[20px] font-normal leading-[180%];
   }
   .lg\:text-bodyXL {
@@ -239,8 +239,90 @@
   }
 }
 
+@media (min-width: 768px) {
+  .md\:text-display1 {
+    @apply text-[48px] font-bold leading-[140%];
+  }
+
+  .md\:text-display2 {
+    @apply text-[40px] font-bold leading-[140%];
+  }
+
+  .md\:text-h1 {
+    @apply text-[36px] font-bold leading-[140%];
+  }
+
+  .md\:text-h2 {
+    @apply text-[32px] font-bold leading-[140%];
+  }
+
+  .md\:text-h3 {
+    @apply text-[28px] font-bold leading-[140%];
+  }
+
+  .md\:text-h4 {
+    @apply text-[22px] font-bold leading-[140%];
+  }
+
+  .md\:text-h5 {
+    @apply text-[18px] font-bold leading-[140%];
+  }
+
+  .md\:text-h6 {
+    @apply text-[15px] font-semibold leading-[180%];
+  }
+
+  .md\:text-h7 {
+    @apply text-[18px] font-normal leading-[180%];
+  }
+
+  .md\:text-bodyXL {
+    @apply text-[18px] font-normal leading-[180%];
+  }
+
+  .md\:text-bodyLG {
+    @apply text-[16px] font-normal leading-[180%];
+  }
+
+  .md\:text-bodyMD {
+    @apply text-[15px] font-normal leading-[180%];
+  }
+
+  .md\:text-bodySM {
+    @apply text-[13px] font-normal leading-[180%];
+  }
+
+  .md\:text-captionMD {
+    @apply text-[11px] font-normal leading-[180%];
+  }
+
+  .md\:text-captionLG {
+    @apply text-[13px] font-bold leading-[180%];
+  }
+
+  .md\:text-captionSM {
+    @apply text-[9px] font-bold leading-[180%];
+  }
+
+  .md\:text-buttonLG {
+    @apply text-[15px] font-medium leading-[180%];
+  }
+
+  .md\:text-buttonSM {
+    @apply text-[13px] font-medium;
+  }
+
+  .md\:text-overlineLG {
+    @apply text-[15px] font-normal leading-[180%];
+  }
+
+  .md\:text-overlineSM {
+    @apply text-[11px] font-bold;
+  }
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Estedad';
+  font-family: "Estedad";
 }
