@@ -11,6 +11,7 @@ const CustomeButton = ({
   isLoading = false,
   children,
   onClick,
+  classname,
   textSize, // سایز متن پیش‌فرض
 }) => {
   const getModelButtonClass = (model, selected, disabled) => {
@@ -119,6 +120,7 @@ const CustomeButton = ({
         ${getModelButtonClass(model, selected, disabled)}
         text-captionMD
         lg:text-buttonLG
+        ${classname ?? ''}
       `}
       onClick={onClick}>
       {isLoading ? <CustomeSpinner /> : children}

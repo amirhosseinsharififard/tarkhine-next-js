@@ -1,3 +1,4 @@
+import About from "../module/About";
 import MenuResturant from "../module/MenuResturant";
 import SwiperSlider from "../module/Swiper";
 import CustomeInput from "../ui/CustomeInput";
@@ -11,7 +12,9 @@ export default function HomePage() {
         <CustomeInput placeHolder="جستجو ..." width={320} height={32} />
       </div>
 
-      <MenuResturant/>
+      <MenuResturant />
+
+      <About />
     </div>
   );
 }
