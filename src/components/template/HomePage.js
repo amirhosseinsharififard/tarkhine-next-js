@@ -1,4 +1,5 @@
 import About from "../module/About";
+import BranchHomePage from "../module/BranchHomePage";
 import MenuResturant from "../module/MenuResturant";
 import SwiperSlider from "../module/Swiper";
 import CustomeInput from "../ui/CustomeInput";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <MenuResturant />
 
       <About />
+      <BranchHomePage />
     </div>
   );
 }
