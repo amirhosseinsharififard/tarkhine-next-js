@@ -15,7 +15,7 @@ import rectangle from "../../../public/images/Rectangle2.svg";
 
 import Image from "next/image";
 import CardFood from "./CardFood";
-import CardComment from "./CardComment";
+import CardComment from "./branch/CardComment";
 
 const SwiperSlider = ({ slider, branch }) => {
   const slicedData = [0, 1, 2, 3, 4, 5];

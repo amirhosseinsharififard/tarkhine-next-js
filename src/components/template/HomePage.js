@@ -1,6 +1,6 @@
-import About from "../module/About";
-import BranchHomePage from "../module/BranchHomePage";
-import MenuResturant from "../module/MenuResturant";
+import About from "../module/home/About";
+import BranchHomePage from "../module/home/BranchHomePage";
+import MenuResturant from "../module/home/MenuResturant";
 import SwiperSlider from "../module/Swiper";
 import CustomeInput from "../ui/CustomeInput";
 

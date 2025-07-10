@@ -5,7 +5,7 @@ import React from "react";
 import aboutImage from "@/public/images/home/about.png";
 
 // custome components
-import CustomeButton from "../ui/CustomeButton";
+import CustomeButton from "../../ui/CustomeButton";
 
 // icon
 import person from "@/public/images/svg/user.svg";
