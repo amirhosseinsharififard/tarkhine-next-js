@@ -11,7 +11,7 @@ import Comments from "../module/Comments";
 
 const BranchPage = () => {
   return (
-    <div className="max-w-screen-xl m-auto" dir="rtl">
+    <div className="max-w-screen-2xl m-auto" dir="rtl">
       <SwiperSlider slider="bigSlider" />
 
       <div className="mx-auto lg:hidden flex justify-between items-center mt-16 mb-24 border-1 w-[320px] rounded-4 pl-2">
@@ -20,6 +20,7 @@ const BranchPage = () => {
           <IoSearchOutline />
         </button>
       </div>
+
       <SpecialOffers title={"پیشنهاد ویژه"} />
       <SpecialOffers title={"غذای محبوب"} bg={true} />
       <SpecialOffers title={"غذاهای غیر ایرانی"} />
@@ -36,6 +37,7 @@ const BranchPage = () => {
       <BranchesShop />
 
       <Comments />
+      
     </div>
   );
 };

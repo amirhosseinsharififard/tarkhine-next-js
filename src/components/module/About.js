@@ -13,7 +13,7 @@ import person from "@/public/images/svg/user.svg";
 export default function About() {
   const map = [0, 1, 2, 3];
   return (
-    <div className="relative w-full  min-h-[420px] mx-auto ">
+    <div className="relative w-full  min-h-[450px] mx-auto ">
       <Image
         src={aboutImage}
         alt="About Image"

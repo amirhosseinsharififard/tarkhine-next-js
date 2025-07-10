@@ -10,7 +10,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { TbBrandTelegram } from "react-icons/tb";
 const Footer = () => {
   return (
-    <div className='max-w-screen-xl mx-auto' dir='rtl'>
+    <div className='max-w-screen-2xl mx-auto' dir='rtl'>
       {/* Wrapper with relative for background image */}
       <div className='relative w-full'>
         {/* Background image in a wrapper behind content */}
