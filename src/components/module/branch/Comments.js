@@ -1,5 +1,5 @@
 import React from "react";
-import SwiperSlider from "./Swiper";
+import SwiperSlider from "../Swiper";
 
 export default function Comments() {
   return (

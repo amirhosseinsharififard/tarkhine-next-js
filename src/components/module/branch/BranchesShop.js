@@ -1,11 +1,11 @@
 import { e2p } from "@/utils/replaceNumber";
-import SwiperSlider from "./Swiper";
 import Image from "next/image";
 
 // icons
 import call from "@/public/images/svg/call-calling.svg";
 import clock from "@/public/images/svg/clock.svg";
 import location from "@/public/images/svg/location.svg";
+import SwiperSlider from "../Swiper";
 export default function BranchesShop() {
   return (
     <div className="text-center mb-15 lg:mb-25">

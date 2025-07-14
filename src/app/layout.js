@@ -1,5 +1,4 @@
 // "use client"
-import Layout from "@/components/layout/Layout";
 import "@/app/globals.css";
 
 
@@ -12,8 +11,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body>
+        {children}
 
-        <Layout>{children}</Layout>
       </body>
     </html>
   );

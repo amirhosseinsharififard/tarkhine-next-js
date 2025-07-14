@@ -1,4 +1,4 @@
-import SwiperSlider from "./Swiper";
+import SwiperSlider from "../Swiper";
 
 const SpecialOffers = ({title,bg=false}) => {
   return (
