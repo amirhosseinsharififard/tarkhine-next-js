@@ -1,9 +1,7 @@
+import LoginPage from "@/components/template/LoginPage";
 
 export default function page() {
   return (
-    <div>
-      slam
-      
-    </div>
+   <LoginPage/>
   )
 }
