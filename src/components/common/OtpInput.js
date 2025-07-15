@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 
-const OtpInput = ({ length = 4, onChange ,error = false}) => {
+const OtpInput = ({ length = 5, onChange ,error = false}) => {
   const [otp, setOtp] = useState(Array(length).fill(""));
   const inputsRef = useRef([]);
 

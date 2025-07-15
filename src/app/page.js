@@ -3,6 +3,7 @@ import HomePage from "@/components/template/HomePage";
 
 import Layout from "@/components/layout/Layout";
 
+
 const Home = () => {
   return (
     <Layout>
@@ -10,8 +11,8 @@ const Home = () => {
     <div dir="rtl">
       
       <HomePage />
-      <ModalHome />
     </div>
+
     </Layout>
   );
 };
