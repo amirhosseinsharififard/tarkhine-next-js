@@ -12,7 +12,7 @@ import bigPicture from "@/public/images/modal/picture.png";
 import SliderModal from "@/components/slider/SliderModal";
 export default function ModalHome() {
   return (
-    <div className="z-10 fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-[rgba(0,0,0,0.6)] ">
+    <div className="fixed top-0 left-0 w-screen h-screen flex justify-center items-center bg-[rgba(0,0,0,0.6)] ">
       {/* chose branch in Home page */}
       {false && (
         <div className="m-auto bg-neutral-white  ">
@@ -40,8 +40,7 @@ export default function ModalHome() {
       )}
 
       {/* full picture homeBranch */}
-
-      <div className="grid grid-cols-4 max-w-screen-2xl w-full mx-auto h-[352px] px-5">
+      <div className="grid grid-cols-4 max-w-screen-2xl  mx-auto h-[352px] px-5">
         <div className="col-span-4 bg-neutral-50 w-full h-full relative">
           <Image
             src={bigPicture}
