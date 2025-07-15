@@ -1,7 +1,6 @@
-// "use client"
-import Layout from "@/components/layout/Layout";
-import "@/app/globals.css";
 
+import "@/app/globals.css";
+import ModalMain from "@/components/template/ModalMain";
 
 export const metadata = {
   title: "Create Next App",
@@ -10,10 +9,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
-
-        <Layout>{children}</Layout>
+        {children}
+        <ModalMain />
       </body>
     </html>
   );
