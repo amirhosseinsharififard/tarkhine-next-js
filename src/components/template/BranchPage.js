@@ -1,4 +1,6 @@
+
 import SwiperSlider from "../module/Swiper";
+
 import CustomeButton from "../ui/CustomeButton";
 import CustomeInput from "../ui/CustomeInput";
 
@@ -8,6 +10,7 @@ import noteSvg from "../../../public/images/note.svg";
 import BranchesShop from "../module/branch/BranchesShop";
 import Comments from "../module/branch/Comments";
 import SpecialOffers from "../module/branch/SpecialOffers";
+
 
 const BranchPage = () => {
   return (
