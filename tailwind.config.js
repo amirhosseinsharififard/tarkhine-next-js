@@ -71,6 +71,7 @@ module.exports = {
           "0 25px 7px rgba(0, 0, 0, 0),0 16px 6px rgba(0, 0, 0, 0.01),0 9px 5px rgba(0, 0, 0, 0.05),0 4px 4px rgba(0, 0, 0, 0.09),0 1px 2px rgba(0, 0, 0, 0.1),0 0px 0px rgba(0, 0, 0, 0.1)",
         contactCard:
           "0 66px 18px rgba(0, 0, 0, 0),0 42px 17px rgba(0, 0, 0, 0.01),0 24px 14px rgba(0, 0, 0, 0.05),0 11px 11px rgba(0, 0, 0, 0.09),0 3px 6px rgba(0, 0, 0, 0.1),0 0px 0px rgba(0, 0, 0, 0.1)",
+        dropShadow: "0 0 10 rgba(0,0,0,0.15)",
       },
       borderRadius: {
         4: "4px",
@@ -93,8 +94,6 @@ module.exports = {
         120: "120px ",
         160: "160px ",
       },
-
- 
     },
   },
   plugins: [],

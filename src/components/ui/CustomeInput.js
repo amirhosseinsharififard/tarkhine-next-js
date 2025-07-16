@@ -346,7 +346,6 @@ const CustomeInput = ({
           absolute
           right-3
           top-0
-          text-neutral-gray8
           text-captionSM
           duration-200
           transform
@@ -359,7 +358,6 @@ const CustomeInput = ({
           peer-focus:-translate-y-2
           peer-focus:scale-75
           peer-focus:text-main-primary
-          bg-white
           px-1
         `}
       >
