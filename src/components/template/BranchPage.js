@@ -1,5 +1,4 @@
 
-import SwiperSlider from "../module/Swiper";
 
 import CustomeButton from "../ui/CustomeButton";
 import CustomeInput from "../ui/CustomeInput";
@@ -10,12 +9,12 @@ import noteSvg from "../../../public/images/note.svg";
 import BranchesShop from "../module/branch/BranchesShop";
 import Comments from "../module/branch/Comments";
 import SpecialOffers from "../module/branch/SpecialOffers";
-
+import BigSlider from "../module/slider/BigSlider";
 
 const BranchPage = () => {
   return (
     <div className="max-w-screen-2xl m-auto" dir="rtl">
-      <SwiperSlider slider="bigSlider" />
+      <BigSlider slider="bigSlider" />
 
       <div className="mx-auto lg:hidden flex justify-between items-center mt-16 mb-24 border-1 w-[320px] rounded-4 pl-2">
         <CustomeInput placeHolder="جستجو" search={true} />
@@ -40,7 +39,6 @@ const BranchPage = () => {
       <BranchesShop />
 
       <Comments />
-      
     </div>
   );
 };

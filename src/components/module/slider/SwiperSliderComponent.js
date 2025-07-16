@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomeButton from "../ui/CustomeButton";
+import CustomeButton from "../../ui/CustomeButton";
 import SliderHomeImage from "@/public/images/SliderHomeImage.png";
 const SwiperSliderComponent = ({ branch = false }) => {
   return (
