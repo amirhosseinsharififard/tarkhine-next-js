@@ -12,8 +12,8 @@ import logoWeb from "../../../public/images/LogoWeb.svg";
 
 const Header = () => {
   return (
-    <div className='max-w-screen-2xl m-auto ' dir="ltr">
-      <div className='flex justify-between items-center p-[20px] lg:pt-32  mx-auto'>
+    <div className='w-full shadow-cards' dir="ltr">
+      <div className='max-w-screen-2xl flex justify-between items-center p-[20px] lg:pt-32  mx-auto '>
         <div className='flex items-center'>
           <Link href='/profile'>
             <Image
