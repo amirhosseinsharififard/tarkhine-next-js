@@ -75,7 +75,7 @@ export default function App({ imageData, active = false, test }) {
   const prevRef = useRef(null);
 
   return (
-    <div className="md:grid grid-cols-8 h-full w-full">
+    <div className="md:grid grid-cols-8 h-full w-full" dir="rtl">
       <div className="col-span-6 col-start-2 h-full w-full">
 
       {/* کاستوم دکمه‌ها */}

@@ -18,10 +18,10 @@ export default function ModalMain({ isOpen = true }) {
   }, [isOpen]);
 
   return (
-    <div className="absolute top-0 right-0 left-0 bottom-0  w-full h-full z-20">
+    <div className="absolute top-0 right-0 left-0 bottom-0  w-full h-full z-20" dir="rtl">
       {/* <LoginModal /> */}
       {/* <ModalHome /> */}
-      <SearchModal />
+      {/* <SearchModal /> */}
     </div>
   );
 }
