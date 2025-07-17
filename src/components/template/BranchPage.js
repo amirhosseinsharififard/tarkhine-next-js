@@ -36,7 +36,7 @@ const BranchPage = () => {
         </CustomeButton>
       </div>
 
-      <BranchesShop />
+      <BranchesShop branch={'branchShop'} />
 
       <Comments />
     </div>

@@ -10,7 +10,7 @@ import Image from "next/image";
 import rectangle from "@/public/images/Rectangle2.svg";
 import SwiperSliderComponent from "./SwiperSliderComponent";
 
-const BigSlider = ({ branch = false }) => {
+const BigSlider = ({ branch  }) => {
   const slicedData = [0, 1, 2, 3, 4, 5];
 
   return (
