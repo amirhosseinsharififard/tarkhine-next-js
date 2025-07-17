@@ -19,7 +19,7 @@ export default function ModalMain({ isOpen = true }) {
 
   return (
     <div className="absolute top-0 right-0 left-0 bottom-0  w-full h-full z-20" dir="rtl">
-      {/* <LoginModal /> */}
+      <LoginModal />
       {/* <ModalHome /> */}
       {/* <SearchModal /> */}
     </div>
