@@ -5,14 +5,17 @@ import Image from "next/image";
 import call from "@/public/images/svg/call-calling.svg";
 import clock from "@/public/images/svg/clock.svg";
 import location from "@/public/images/svg/location.svg";
-import SwiperSlider from "../Swiper";
+import SwiperSliderComponent from "../slider/SwiperSliderComponent";
+import BigSlider from "../slider/BigSlider";
 export default function BranchesShop() {
   return (
     <div className="text-center mb-15 lg:mb-25">
       <h4 className="text-neutral-gray8 text-h6 lg:text-h4 mb-3 lg:mb-5 ">
         شعبه اکباتان
       </h4>
-      <SwiperSlider slider="bigSlider" branch={true} />
+
+      <BigSlider branch={'branchShop'}/>
+
       <div className="relative text-neutral-gray8">
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 p-3 border border-main-primary w-[90%] lg:w-[810px] mx-auto absolute top-[-20px] lg:top-[-30px] left-0 right-0 bg-neutral-white z-20">
           <div className="col-span-2 lg:col-span-1 flex lg:flex-col order-1 lg:order-2">

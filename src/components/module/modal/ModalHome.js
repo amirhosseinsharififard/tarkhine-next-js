@@ -10,7 +10,7 @@ import Image from "next/image";
 import bigPicture from "@/public/images/modal/picture.png";
 
 // slider
-import SliderModal from "@/components/slider/SliderModal";
+import SliderModal from "@/components/module/slider/SliderModal";
 
 export default function ModalHome() {
   return (

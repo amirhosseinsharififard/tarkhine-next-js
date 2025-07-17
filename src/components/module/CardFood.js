@@ -10,12 +10,12 @@ import FoodImage from "@/public/images/foodPicture.png";
 import { formatPrice } from "@/utils/replaceNumber";
 const CardFood = () => {
   return (
-    <div className="w-1/2 md:w-1/5 h-full flex flex-col overflow-hidden border-1 rounded-4 md:rounded-8 border-neutral-gray4 pb-8 bg-neutral-white " dir="rtl">
-      <div className="w-full h-[110px] md:h-[256px] overflow-hidden relative">
+    <div className="w-full h-full flex flex-col overflow-hidden border-1 rounded-4 md:rounded-8 border-neutral-gray4 pb-8 bg-neutral-white " dir="rtl">
+      <div className="w-full h-[110px] sm:h-[147px] md:h-[256px] overflow-hidden relative">
         <Image
           src={FoodImage}
           alt="Image"
-          className="h-full w-full object-cover "
+          className="h-full w-full object-cover  "
         />
       </div>
 

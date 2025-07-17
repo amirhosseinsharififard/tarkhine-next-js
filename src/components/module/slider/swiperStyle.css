@@ -52,6 +52,10 @@
   height: 12px;
   background: #417f56;
 }
+.swiper-slide{
+  background: none;
+}
+
 
 @media (max-width: 1024px) {
   .swiper-pagination-bullet {
@@ -85,11 +89,9 @@
   color: white;
 }
 
-
 @media (min-width: 760px) {
   .big-slider .swiper-button-prev::after,
   .big-slider .swiper-button-next::after {
     font-size: 48px !important; /* سایز فلش داخل دکمه برای صفحه نمایش های کوچکتر */
   }
-  
 }
