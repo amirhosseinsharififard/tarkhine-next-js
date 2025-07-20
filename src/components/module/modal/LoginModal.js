@@ -23,7 +23,7 @@ export default function LoginModal() {
   };
  
   return (
-    <div className=" bg-neutral-white w-full h-full">
+    <div className=" bg-neutral-white w-full h-full" dir="ltr">
 
     <div className="grid grid-cols-4 px-5 max-w-sm m-auto   ">
 

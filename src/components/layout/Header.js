@@ -12,15 +12,22 @@ import logoWeb from "../../../public/images/LogoWeb.svg";
 
 // icons
 import { IoIosArrowDown } from "react-icons/io";
+import { GoPerson } from "react-icons/go";
+import { IoWalletOutline } from "react-icons/io5";
+import { CiHeart } from "react-icons/ci";
+import { TfiLocationPin } from "react-icons/tfi";
+import { CiLogout } from "react-icons/ci";
 
 const dropDownHoverList = {
   branches: ["اکباتان", "چالوس", "اقدسیه", "ونک"],
   menu: ["غذای اصلی", "پیش غذا", "دسر", "نوشیدنی"],
-  profile: [{ title: "پروفایل", icon: "" }],
-  profile: [{ title: "پیگیری سفارش", icon: "" }],
-  profile: [{ title: "علاقه مندی ها", icon: "" }],
-  profile: [{ title: "آدرس های من", icon: "" }],
-  profile: [{ title: "خروج از حساب", icon: "" }],
+  profile: [
+    { title: "پروفایل", icon: <GoPerson /> },
+    { title: "پیگیری سفارش", icon: <IoWalletOutline /> },
+    { title: "علاقه مندی ها", icon: <CiHeart /> },
+    { title: "آدرس های من", icon: <TfiLocationPin /> },
+    { title: "خروج از حساب", icon: <CiLogout /> },
+  ],
 };
 
 const Header = () => {
@@ -39,15 +46,18 @@ const Header = () => {
             </Link>
 
             <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-100 rounded-4">
-              {dropDownHoverList.menu.map((item, index) => {
+              {dropDownHoverList.profile.map((item, index) => {
                 return (
                   <React.Fragment key={index}>
                     <li className=" w-full text-bodySM">
-                        <Link href="#" className="block p-2">
-                          {item}
-                        </Link>
-                      </li>
-                    <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]"/>
+                      <Link href="#" className="block p-2  ">
+                        <div className="flex justify-end items-center content-center gap-1">
+                          <p>{item.title}</p>
+                          <span className="text-lg">{item.icon}</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]" />
                   </React.Fragment>
                 );
               })}
@@ -97,7 +107,7 @@ const Header = () => {
                           {item}
                         </Link>
                       </li>
-                      <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]"/>
+                      <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]" />
                     </React.Fragment>
                   );
                 })}
@@ -121,7 +131,7 @@ const Header = () => {
                           {item}
                         </Link>
                       </li>
-                      <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]"/>
+                      <div className="mx-auto h-0.5 w-[90%] bg-[rgba(0,0,0,.1)]" />
                     </React.Fragment>
                   );
                 })}
