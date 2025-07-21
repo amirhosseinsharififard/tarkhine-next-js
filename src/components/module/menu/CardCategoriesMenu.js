@@ -10,39 +10,61 @@ import { e2p, formatPrice } from "@/utils/replaceNumber";
 import { CiHeart } from "react-icons/ci";
 import { LiaStarSolid } from "react-icons/lia";
 
+// image
+import CardMenuPicture from "@/public/images/menu/CardMenuPicture.png";
 export default function CardCategoriesMenu() {
   const rating = 3;
   return (
-    <div className="col-span-12  mx-auto border-1 border-neutral-gray4 rounded-4 max-h-[100px]  overflow-hidden sm:w-full sm:col-span-6">
+    <div className="col-span-12  mx-auto border-1 border-neutral-gray4 rounded-4 max-h-[100px]  overflow-hidden sm:w-full sm:col-span-6 sm:max-h-[160px] sm:shadow-cards lg:col-span-4">
       <div className="flex text-captionSM font-medium text-neutral-gray8 ">
-        <div>
+        <div className=" h-[100px] sm:h-[160px] min-w-2/7">
           <Image
-            src={""}
+            src={CardMenuPicture}
             alt="img"
-            className="w-[90px] h-full object-cover bg-neutral-gray4"
+            className="w-full h-full object-cover bg-neutral-gray4"
           />
         </div>
-        <div className="m-2 flex flex-col justify-between w-auto">
-          <div className="flex justify-between items-center">
-            <h6 className="text-captionMD font-bold ">کوفته برنجی</h6>
-            <div className="flex flex-row-reverse gap-2">
-              <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium">
+        <div className="m-2 flex flex-col justify-between w-auto sm:w-full">
+          <div className="flex justify-between items-center sm:flex-col w-full sm:items-end">
+            <div className="sm:flex sm:justify-between sm:w-full sm:items-center ">
+              <h6 className="text-captionMD sm:text-h7 sm:!font-bold ">
+                کوفته برنجی
+              </h6>
+              <span className="hidden sm:block">
+                <CiHeart className="w-4 sm:w-6 h-4 sm:h-6 " />
+              </span>
+            </div>
+            <div className="flex flex-row-reverse gap-2 sm:hidden">
+              <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium sm:text-captionMD">
                 %{e2p(35)}
               </span>
-              <span className="text-neutral-gray5 line-through  font-medium">
+              <span className="text-neutral-gray5 line-through  font-medium sm:text-captionLG">
                 {formatPrice(180000)}
               </span>
             </div>
           </div>
-          <div className="flex justify-between items-center gap-2">
-            <p className=" text-captionSM  truncate w-0 flex-1 min-w-0 ">
+          <div className="flex justify-between items-center gap-2 sm:text-bodySM sm:font-medium">
+            <p className=" text-captionSM sm:text-bodySM  truncate w-0 flex-1 min-w-0 ">
               برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز
             </p>
-            <p className="font-medium text-nowrap ">{formatPrice(145000)} تومان</p>
+
+            <div className=" gap-2 hidden sm:flex flex-col">
+              <div className="text-left">
+                <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium sm:text-captionMD">
+                  %{e2p(35)}
+                </span>
+                <span className="text-neutral-gray5 line-through  font-medium sm:text-captionLG">
+                  {formatPrice(180000)}
+                </span>
+              </div>
+              <p className="font-medium text-nowrap sm:text-bodyLG ">
+                {formatPrice(145000)} تومان
+              </p>
+            </div>
           </div>
           <div className="flex justify-between items-center content-center">
-            <span>
-              <CiHeart className="w-4 h-4" />
+            <span className="sm:hidden">
+              <CiHeart className="w-4 h-4 " />
             </span>
             <div className="flex flex-row-reverse">
               {Array.from({ length: 5 }).map((_, i) =>
@@ -59,7 +81,14 @@ export default function CardCategoriesMenu() {
                 )
               )}
             </div>
-            <CustomeButton height='32' classname={'text-captionSM font-medium text-nowrap'}>افزودن به سبد خرید</CustomeButton>
+            <CustomeButton
+              height="32 "
+              classname={
+                "text-captionSM font-medium text-nowrap sm:w-full sm:h-40 sm:text-bodyXL"
+              }
+            >
+              افزودن به سبد خرید
+            </CustomeButton>
           </div>
         </div>
       </div>

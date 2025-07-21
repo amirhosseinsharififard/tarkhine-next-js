@@ -22,6 +22,8 @@ export default function MenuPage() {
         </div>
       
       <CategoriesFoodMenu title={"غذای های ایرانی"}/>
+      <CategoriesFoodMenu title={"غذای های ایرانی"}/>
+
       </div>
 
 
