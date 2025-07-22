@@ -18,7 +18,7 @@ export default function MenuPage() {
           <MenuSlider />
         </div>
         <div className="hidden md:block md:col-span-4 px-2">
-          <CustomeInput placeHolder="جستجو " />
+          <CustomeInput placeHolder="جستجو " classname={"!border-neutral-gray4"} />
         </div>
       
       <CategoriesFoodMenu title={"غذای های ایرانی"}/>
