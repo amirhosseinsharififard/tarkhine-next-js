@@ -58,7 +58,7 @@ export default function CardCategoriesMenu({ loading = false }) {
   }
 
   return (
-    <div className="mx-auto col-start-4  border-1 border-neutral-gray4 rounded-4 h-[100px] overflow-hidden sm:col-span-6 md:w-full md:col-span-8 md:col-start-3 md:h-[160px] md:shadow-cards ">
+    <div className="mx-auto col-start-4  border-1 border-neutral-gray4 rounded-4 h-[100px] overflow-hidden sm:col-span-6 md:w-full md:col-span-8 md:col-start-3 md:h-[160px] md:max-w-[600px] md:shadow-cards lg:col-span-6 ">
       <div className="flex text-captionSM font-medium text-neutral-gray8">
         <div className="relative min-w-[90px] h-[100px] md:min-w-[169px] md:h-[158px]">
           <Image
@@ -68,7 +68,7 @@ export default function CardCategoriesMenu({ loading = false }) {
             className="object-cover"
           />
         </div>
-        <div className="my-2 px-1  flex flex-col justify-between w-full ">
+        <div className="my-2 px-1 md:pl-3 md:pr-8 flex flex-col justify-between w-full ">
           <div className="flex justify-between items-center md:flex-col w-full md:items-end">
             <div className="md:flex md:justify-between md:w-full md:items-center">
               <h6 className=" m-0 text-captionMD md:text-h7 md:!font-bold">
@@ -88,7 +88,7 @@ export default function CardCategoriesMenu({ loading = false }) {
             </div>
           </div>
           <div className="flex justify-between items-center gap-2 md:text-bodySM md:font-medium">
-            <p className="text-captionSM !font-light md:text-bodySM md:!font-medium truncate w-0 flex-1 min-w-0">
+            <p className="text-captionSM !font-light md:text-bodySM md:!font-medium truncate md:text-wrap w-0 flex-1 min-w-0">
               برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز
             </p>
 
@@ -106,7 +106,7 @@ export default function CardCategoriesMenu({ loading = false }) {
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center content-center gap-2">
+          <div className="flex justify-between items-center content-center gap-2 md:justify-evenly">
             <span className="md:hidden">
               <CiHeart className="w-4 h-4" />
             </span>
@@ -128,7 +128,7 @@ export default function CardCategoriesMenu({ loading = false }) {
             <CustomeButton
               height="32"
               classname={
-                "text-captionSM !font-light text-nowrap !w-[100px]  md:w-full md:h-40 md:text-bodyXL"
+                "text-captionSM !font-light text-nowrap w-[100px]  md:w-full md:max-w-[244px] md:h-40 md:text-bodyXL"
               }
             >
               افزودن به سبد خرید
