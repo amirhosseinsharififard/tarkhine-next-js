@@ -7,7 +7,7 @@ import CustomeInput from "../ui/CustomeInput";
 export default function MenuPage() {
   return (
     <div className="" dir="rtl">
-      <div className="max-w-screen-2xl m-auto">
+      <div className="max-w-[1440px] m-auto">
         <BigSlider />
       </div>
 
