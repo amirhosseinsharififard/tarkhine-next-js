@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CustomeButton from "../../ui/CustomeButton";
+// icons
 import { CiHeart } from "react-icons/ci";
 import { IoStar } from "react-icons/io5";
 
