@@ -58,57 +58,56 @@ export default function CardCategoriesMenu({ loading = false }) {
   }
 
   return (
-    <div className="col-span-12 mx-auto border-1 border-neutral-gray4 rounded-4 max-h-[100px] overflow-hidden sm:w-full sm:col-span-6 sm:max-h-[160px] sm:shadow-cards lg:col-span-4">
+    <div className="mx-auto col-start-4  border-1 border-neutral-gray4 rounded-4 h-[100px] overflow-hidden sm:col-span-6 md:w-full md:col-span-8 md:col-start-3 md:h-[160px] md:max-w-[600px] md:shadow-cards lg:col-span-6 ">
       <div className="flex text-captionSM font-medium text-neutral-gray8">
-        <div className="h-[100px] sm:h-[160px] min-w-2/7">
+        <div className="relative min-w-[90px] h-[100px] md:min-w-[169px] md:h-[158px]">
           <Image
             src={CardMenuPicture}
             alt="img"
-            className="w-full h-full object-cover bg-neutral-gray4"
-            width={160}
-            height={160}
+            fill
+            className="object-cover"
           />
         </div>
-        <div className="m-2  flex flex-col justify-between w-auto sm:w-full ">
-          <div className="flex justify-between items-center sm:flex-col w-full sm:items-end">
-            <div className="sm:flex sm:justify-between sm:w-full sm:items-center">
-              <h6 className="text-captionMD sm:text-h7 sm:!font-bold">
+        <div className="my-2 px-1 md:pl-3 md:pr-8 flex flex-col justify-between w-full ">
+          <div className="flex justify-between items-center md:flex-col w-full md:items-end">
+            <div className="md:flex md:justify-between md:w-full md:items-center">
+              <h6 className=" m-0 text-captionMD md:text-h7 md:!font-bold">
                 کوفته برنجی
               </h6>
-              <span className="hidden sm:block">
-                <CiHeart className="w-4 sm:w-6 h-4 sm:h-6" />
+              <span className="hidden md:block">
+                <CiHeart className="w-4 md:w-6 h-4 md:h-6" />
               </span>
             </div>
-            <div className="flex flex-row-reverse gap-2 sm:hidden">
-              <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium sm:text-captionMD">
+            <div className="flex flex-row-reverse gap-2 md:hidden">
+              <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium md:text-captionMD">
                 %{e2p(35)}
               </span>
-              <span className="text-neutral-gray5 line-through font-medium sm:text-captionLG">
+              <span className="text-neutral-gray5 line-through font-medium md:text-captionLG">
                 {formatPrice(180000)}
               </span>
             </div>
           </div>
-          <div className="flex justify-between items-center gap-2 sm:text-bodySM sm:font-medium">
-            <p className="text-captionSM sm:text-bodySM truncate w-0 flex-1 min-w-0">
+          <div className="flex justify-between items-center gap-2 md:text-bodySM md:font-medium">
+            <p className="text-captionSM !font-light md:text-bodySM md:!font-medium truncate md:text-wrap w-0 flex-1 min-w-0">
               برنج سبزی کوفته لپه آرد نخودچی، گردو و زرشک و آلو پیاز
             </p>
 
-            <div className="gap-2 hidden sm:flex flex-col">
-              <div className="text-left">
-                <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium sm:text-captionMD">
+            <div className="gap-2 block md:flex flex-col">
+              <div className="text-left hidden md:flex flex-row-reverse gap-1">
+                <span className="text-status-error bg-status-error-eL px-1.5 py-[1px] rounded-8 font-medium md:text-captionMD">
                   %{e2p(35)}
                 </span>
-                <span className="text-neutral-gray5 line-through font-medium sm:text-captionLG">
+                <span className="text-neutral-gray5 line-through font-medium md:text-captionLG">
                   {formatPrice(180000)}
                 </span>
               </div>
-              <p className="font-medium text-nowrap sm:text-bodyLG">
+              <p className="font-medium text-nowrap md:text-bodyLG">
                 {formatPrice(145000)} تومان
               </p>
             </div>
           </div>
-          <div className="flex justify-between items-center content-center">
-            <span className="sm:hidden">
+          <div className="flex justify-between items-center content-center gap-2 md:justify-evenly">
+            <span className="md:hidden">
               <CiHeart className="w-4 h-4" />
             </span>
             <div className="flex flex-row-reverse">
@@ -116,12 +115,12 @@ export default function CardCategoriesMenu({ loading = false }) {
                 i < rating ? (
                   <LiaStarSolid
                     key={i}
-                    className="w-4 h-4 text-status-warning-l"
+                    className="w-4 h-4 md:w-6 md:h-6 text-status-warning-l"
                   />
                 ) : (
                   <LiaStarSolid
                     key={i}
-                    className="w-4 h-4 text-neutral-gray4"
+                    className="w-4 h-4 md:w-6 md:h-6 text-neutral-gray4"
                   />
                 )
               )}
@@ -129,7 +128,7 @@ export default function CardCategoriesMenu({ loading = false }) {
             <CustomeButton
               height="32"
               classname={
-                "text-captionSM font-medium text-nowrap sm:w-full sm:h-40 sm:text-bodyXL"
+                "text-captionSM !font-light text-nowrap w-[100px]  md:w-full md:max-w-[244px] md:h-40 md:text-bodyXL"
               }
             >
               افزودن به سبد خرید

@@ -13,7 +13,7 @@ export default function MenuPage() {
 
       <MenuTabs />
 
-      <div className="max-w-screen-2xl my-2 mx-auto md:my-4 grid grid-cols-4 md:grid-cols-12 ">
+      <div className="max-w-[1224px] my-2 mx-auto md:my-4 grid grid-cols-4 md:grid-cols-12 ">
         <div className="col-span-4 md:col-span-8">
           <MenuSlider />
         </div>
