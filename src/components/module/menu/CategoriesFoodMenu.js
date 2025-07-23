@@ -24,7 +24,7 @@ export default function CategoriesFoodMenu({ title }) {
         </CustomeButton>
       </div>
 
-      <div className="grid grid-cols-12   ">
+      <div className="flex flex-col sm:grid sm:grid-cols-12 gap-3  ">
         {num.map((item) => (
           <CardCategoriesMenu key={item} />
         ))}

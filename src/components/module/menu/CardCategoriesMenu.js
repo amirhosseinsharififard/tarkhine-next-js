@@ -58,7 +58,7 @@ export default function CardCategoriesMenu({ loading = false }) {
   }
 
   return (
-    <div className="mx-auto col-start-4  border-1 border-neutral-gray4 rounded-4 h-[100px] overflow-hidden sm:col-span-6 md:w-full md:col-span-8 md:col-start-3 md:h-[160px] md:max-w-[600px] md:shadow-cards lg:col-span-6 ">
+    <div className="mx-auto sm:col-start-4  border-1 border-neutral-gray4 rounded-4 h-[100px] overflow-hidden sm:col-span-6 md:w-full md:col-span-8 md:col-start-3 md:h-[160px] md:max-w-[600px] md:shadow-cards lg:col-span-6 ">
       <div className="flex text-captionSM font-medium text-neutral-gray8">
         <div className="relative min-w-[90px] h-[100px] md:min-w-[169px] md:h-[158px]">
           <Image
