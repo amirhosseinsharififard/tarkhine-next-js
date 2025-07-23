@@ -12,7 +12,13 @@ import { GrNext } from "react-icons/gr";
 import OtpInput from "../../common/OtpInput";
 import logoModalSearchBigSize from "@/public/images/search/LogoModalSearchBigSize.svg";
 
+// function
 import { e2p } from "@/utils/replaceNumber";
+
+// hot Toast
+import toast, { Toaster } from "react-hot-toast";
+import { useEffect, useState } from "react";
+const notify = () => toast("Here is your toast.");
 
 export default function LoginModal() {
   const checkStatus = (status) => {
@@ -23,9 +29,19 @@ export default function LoginModal() {
     console.log("OTP value:", val);
   };
 
+  // داخل کامپوننت LoginModal
+  const [showToast, setShowToast] = useState(false);
+
+  useEffect(() => {
+    if (showToast) {
+      const timeout = setTimeout(() => setShowToast(false), 3000);
+      return () => clearTimeout(timeout);
+    }
+  }, [showToast]);
+
   return (
     <div
-      className=" bg-neutral-white w-full h-full md:bg-[rgba(0,0,0,0.6)] md:flex  "
+      className=" bg-neutral-white w-full h-full md:bg-[rgba(0,0,0,0.6)] md:flex relative "
       dir="ltr"
     >
       <div className="grid grid-cols-4 px-5 md:px-4 max-w-sm m-auto bg-neutral-white md:h-[302px] md:w-md md:rounded-8">
@@ -70,7 +86,7 @@ export default function LoginModal() {
         </div>
 
         <div className="col-span-4 h-1">
-          {checkStatus(true) && (
+          {checkStatus(false) && (
             <CustomeInput
               classname="text-left w-full text-bodyMD text-neutral-gray7 mt-6 md:mt-0"
               placeHolder="شماره همراه"
@@ -78,13 +94,13 @@ export default function LoginModal() {
               height={40}
             ></CustomeInput>
           )}
-          {checkStatus(false) && (
-            <div className="mt-6">
+          {checkStatus(true) && (
+            <div className="mt-6 md:mt-0">
               <OtpInput onChange={handleOtpChange} />
             </div>
           )}
 
-          {checkStatus(false) && (
+          {checkStatus(true) && (
             <div className="flex justify-between items-center content-center mt-2 px-4 text-neutral-gray7 text-captionSM">
               <Link href="#">
                 <p>ویرایش شماره</p>
@@ -102,18 +118,48 @@ export default function LoginModal() {
           )}
         </div>
 
-        <div className="col-span-4 mt-6 md:mt-4 text-buttonLG flex flex-col ">
-          <CustomeButton classname={"w-full"} disabled={true}>
-            {checkStatus(true) && " تایید"}
-            {checkStatus(false) && "ورود"}
-          </CustomeButton>
+        <div
+          className={`col-span-4 mt-14 md:${
+            checkStatus(false) ? "mt-1" : "mt-15"
+          } text-buttonLG flex flex-col `}
+        >
+          {!showToast && (
+            <CustomeButton
+              onClick={() => setShowToast(true)}
+              classname={"w-full"}
+              disabled={true}
+            >
+              {checkStatus(true) && " تایید"}
+              {checkStatus(false) && "ورود"}
+            </CustomeButton>
+          )}
 
-          {checkStatus(true) && (
+          <div
+            className={` bg-main-primary text-white mt-2 px-4 py-2 rounded-lg shadow-lg text-captionMD z-100 transition-opacity duration-300 ${
+              showToast ? "block opacity-100" : "opacity-0 hidden"
+            }`}
+          >
+            عملیات موفق بود!
+          </div>
+          {checkStatus(false) && (
             <p className="mt-2 md:mt-4 text-center text-neutral-gray8 text-captionSM ">
               ورود و عضویت در ترخینه به منزله قبول
               <span className="text-main-primary"> قوانین و مقررات</span> است.
             </p>
           )}
+
+          {/* <Toaster
+  position="bottom-center"
+  containerStyle={{
+    position: "absolute",
+    bottom: "1rem",
+    left: 0,
+    right: 0,
+    margin: "0 auto",
+    width: "fit-content",
+    zIndex: 50,
+  }}
+/> */}
         </div>
       </div>
     </div>
