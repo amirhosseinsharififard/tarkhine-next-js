@@ -7,13 +7,13 @@ import CustomeInput from "../ui/CustomeInput";
 export default function MenuPage() {
   return (
     <div className="" dir="rtl">
-      <div className="max-w-screen-2xl m-auto">
+      <div className="max-w-[1440px] m-auto">
         <BigSlider />
       </div>
 
       <MenuTabs />
 
-      <div className="max-w-screen-2xl my-2 mx-auto md:my-4 grid grid-cols-4 md:grid-cols-12 ">
+      <div className="max-w-[1224px] my-2 mx-auto md:my-4 grid grid-cols-4 md:grid-cols-12 ">
         <div className="col-span-4 md:col-span-8">
           <MenuSlider />
         </div>

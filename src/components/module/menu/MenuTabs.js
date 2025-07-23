@@ -4,7 +4,7 @@ export default function MenuTabs({}) {
   const map = [0, 1, 2, 3];
   return (
     <div className=" bg-neutral-gray3">
-      <div className="max-w-screen-2xl mx-auto pt-4 px-5  ">
+      <div className="max-w-[1224px] mx-auto pt-4 px-5  ">
         <ul className="flex  w-full gap-4 ">
           {map.map((item) => {
             return (
