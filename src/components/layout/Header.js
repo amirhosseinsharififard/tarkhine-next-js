@@ -33,7 +33,7 @@ const Header = () => {
   const login = true;
   return (
     <div className="w-full shadow-cards" dir="ltr">
-      <div className="max-w-screen-2xl flex justify-between items-center p-[20px] lg:pt-32  mx-auto ">
+      <div className="max-w-[1224px] flex justify-between items-center p-[20px] lg:pt-32  mx-auto ">
         <div className="flex items-center">
           <div className="group">
             <Link
