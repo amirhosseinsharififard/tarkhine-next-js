@@ -5,10 +5,9 @@ import MenuResturant from "../module/home/MenuResturant";
 import CustomeInput from "../ui/CustomeInput";
 import BigSlider from "../module/slider/BigSlider";
 
-
 export default function HomePage() {
   return (
-    <div className="max-w-screen-2xl m-auto" >
+    <div className="max-w-screen-2xl m-auto">
       <BigSlider slider="bigSlider" />
 
       <div className="flex lg:hidden  justify-center items-center mt-4 mb-6">
@@ -18,9 +17,8 @@ export default function HomePage() {
       <MenuResturant />
 
       <About />
-      
-      <BranchHomePage />
 
+      <BranchHomePage />
     </div>
   );
 }

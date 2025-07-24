@@ -3,7 +3,7 @@ import CardMenuResturant from "./CardMenuResturant";
 
 export default function MenuResturant() {
   return (
-    <div className="mb-10 md:mb-12">
+    <div className="mb-10 md:mb-12 max-w-[1224px] mx-auto">
       <h4 className="text-h6 text-center md:text-h5 lg:text-h4 lg:mt-6 lg:mb-8">
         منوی رستوران
       </h4>

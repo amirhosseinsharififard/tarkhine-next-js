@@ -9,15 +9,15 @@ import galleryIcon from "@/public/images/svg/gallery.svg";
 export default function CardBranch({ model }) {
   return (
     <div
-      className={`group col-span-12 mx-auto flex md:flex-col overflow-hidden border-1 border-neutral-gray4 hover:border-main-primary 
+      className={`group col-span-12 sm:col-span-6 lg:col-span-3 mx-auto flex md:flex-col overflow-hidden border-1 border-neutral-gray4 hover:border-main-primary 
         ${
           model !== "modal" &&
-          " rounded-4 md:min-w-[288px] max-w-[90%] max-h-[80px] md:min-h-[344px] "
+          " rounded-4  max-w-[90%] max-h-[80px] md:min-h-[344px] lg:w-full hover:shadow-cards"
         }
 
         ${
           model === "modal" &&
-          "rounded-8 max-w-[300px] max-h-[80px] md:w-[20%] md:min-h-[260px] hover:shadow-cards"
+          "rounded-8 max-w-[300px] max-h-[80px] md:w-[20%] md:min-h-[260px]  hover:shadow-cards"
         }
         `}
     >
@@ -35,7 +35,7 @@ export default function CardBranch({ model }) {
            
             ${
               model !== "modal" &&
-              "max-w-[144px]   md:max-w-[288px] md:max-h-[230px] md:group-hover:max-h-[190px]"
+              "max-w-[144px] md:max-w-[288px] md:max-h-[230px] md:group-hover:max-h-[190px]"
             }
             ${model === "modal" && "h-full md:w-full "}
           `}
@@ -65,7 +65,7 @@ export default function CardBranch({ model }) {
           شعبه اکباتان
         </h5>
         <p
-          className={` text-neutral-gray7 text-center mb-4
+          className={` text-neutral-gray7 text-center mb-1
           ${model !== "modal" && "text-captionSM md:text-captionLG"}
           ${model === "modal" && "text-captionSM md:text-captionMD"}
           `}
@@ -76,7 +76,7 @@ export default function CardBranch({ model }) {
 
       <CustomeButton
         classname={`
-          hidden md:block transition-all duration-300 px-6! mx-auto
+         hidden md:block transition-all duration-300 px-6! mx-auto
           md:opacity-0 md:scale-95 md:pointer-events-none
           md:group-hover:opacity-100 md:group-hover:scale-100 md:group-hover:pointer-events-auto
           ${model === "modal" && "md:hidden"}
