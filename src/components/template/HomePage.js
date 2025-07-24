@@ -1,5 +1,4 @@
 "use client";
-import { useDispatch, useSelector } from "react-redux";
 import About from "../module/home/About";
 import BranchHomePage from "../module/home/BranchHomePage";
 import MenuResturant from "../module/home/MenuResturant";

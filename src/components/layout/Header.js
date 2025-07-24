@@ -43,7 +43,7 @@ const Header = () => {
                   ? "bg-main-primary text-neutral-white"
                   : "bg-main-tint1 text-main-primary"
               }
-              ${login && 'px-2'}
+              ${login && 'px-1 w-[34px] lg:px-2'}
               `}
 
             >
