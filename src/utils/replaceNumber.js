@@ -12,8 +12,8 @@ const sp = (number) => {
 };
 
 function formatPrice(number) {
-  if(typeof number !== "number") return ""
-  return new Intl.NumberFormat("fa-IR").format(number) ;
+  if (typeof number !== "number") return "";
+  return new Intl.NumberFormat("fa-IR").format(number);
 }
 
 export { e2p, p2e, sp, formatPrice };
