@@ -29,6 +29,11 @@ export default function LoginModal() {
     console.log("OTP value:", val);
   };
 
+ 
+  return (
+    <div className=" bg-neutral-white w-full h-full" dir="ltr">
+
+
   // داخل کامپوننت LoginModal
   const [showToast, setShowToast] = useState(false);
 

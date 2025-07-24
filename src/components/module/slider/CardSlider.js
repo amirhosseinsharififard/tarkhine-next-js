@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "./swiperStyle.css";
-import CardFood from "../CardFood";
+import CardProduct from "../common/CardProduct";
 
 const CardSlider = () => {
   const slicedData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
@@ -15,7 +15,7 @@ const CardSlider = () => {
 
   const updateVisibleSlides = (swiper) => {
     const slidesPerView = Math.floor(swiper.params.slidesPerView);
-    const activeIndex = swiper.realIndex; 
+    const activeIndex = swiper.realIndex;
     const totalSlides = slicedData.length;
     let visible = [];
     for (let i = 0; i < slidesPerView; i++) {
@@ -63,7 +63,7 @@ const CardSlider = () => {
             }
             `}
           >
-            <CardFood />
+            <CardProduct />
           </SwiperSlide>
         ))}
       </Swiper>

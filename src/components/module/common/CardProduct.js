@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomeButton from "../ui/CustomeButton";
+import CustomeButton from "../../ui/CustomeButton";
 import { CiHeart } from "react-icons/ci";
 import { IoStar } from "react-icons/io5";
 
@@ -8,9 +8,12 @@ import { IoStar } from "react-icons/io5";
 // image
 import FoodImage from "@/public/images/foodPicture.png";
 import { formatPrice } from "@/utils/replaceNumber";
-const CardFood = () => {
+const CardProduct = () => {
   return (
-    <div className="w-full h-full flex flex-col overflow-hidden border-1 rounded-4 md:rounded-8 border-neutral-gray4 pb-8 bg-neutral-white " dir="rtl">
+    <div
+      className="w-full h-full flex flex-col overflow-hidden border-1 rounded-4 md:rounded-8 border-neutral-gray4 pb-8 bg-neutral-white "
+      dir="rtl"
+    >
       <div className="w-full h-[110px] sm:h-[147px] md:h-[256px] overflow-hidden relative">
         <Image
           src={FoodImage}
@@ -64,4 +67,4 @@ const CardFood = () => {
   );
 };
 
-export default CardFood;
+export default CardProduct;
