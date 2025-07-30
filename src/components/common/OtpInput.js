@@ -43,7 +43,7 @@ const OtpInput = ({ length = 5, onChange ,error = false}) => {
   };
 
   return (
-    <div className="flex gap-3 justify-center">
+    <div className="flex  justify-evenly w-full">
       {otp.map((digit, idx) => (
         <input
           key={idx}
@@ -55,7 +55,8 @@ const OtpInput = ({ length = 5, onChange ,error = false}) => {
           onKeyDown={(e) => handleKeyDown(e, idx)}
           className={`
             w-12
-            h-[48px]
+            md:w-14
+            h-[40px]
             text-center
             text-xl
             border

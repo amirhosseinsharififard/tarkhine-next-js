@@ -12,7 +12,7 @@ export default function EmptyShop() {
   return (
 
      
-      <div className="w-full border-1 border-neutral-gray4 min-h-[375px] rounded-8 relative flex justify-center items-center content-center md:col-span-12 md:mt-10">
+      <div className="w-full border-1 border-neutral-gray4 min-h-[375px] rounded-8 relative flex justify-center items-center content-center md:col-span-12 md:mt-10 mt-6">
         <Image
           src={EmptyPage}
           alt=" EmptyPage"

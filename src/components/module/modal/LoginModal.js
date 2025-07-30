@@ -32,8 +32,6 @@ export default function LoginModal() {
   };
 
  
-  return (
-    <div className=" bg-neutral-white w-full h-full" dir="ltr">
 
 
   // داخل کامپوننت LoginModal
@@ -126,7 +124,7 @@ export default function LoginModal() {
         </div>
 
         <div
-          className={`col-span-4 mt-14 md:${
+          className={`col-span-4 mt-25 md:mt-14 md:${
             checkStatus(false) ? "mt-1" : "mt-15"
           } text-buttonLG flex flex-col `}
         >

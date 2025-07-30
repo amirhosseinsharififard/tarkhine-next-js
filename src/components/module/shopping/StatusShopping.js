@@ -11,7 +11,7 @@ import { IoWalletOutline } from "react-icons/io5";
 export default function StatusShopping({ step = 0 }) {
   return (
     <>
-      <div className=" flex justify-between items-center content-center text-neutral-gray8 mb-6 md:hidden">
+      <div className=" flex justify-between items-center content-center text-neutral-gray8  md:hidden">
         <Link href={"#"}>
           <TfiTrash className="w-4 h-4 text-neutral-gray4" />
         </Link>
