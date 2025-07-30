@@ -103,7 +103,7 @@ const Header = () => {
 
             <li className="text-bodyXL group relative ">
               <Link
-                href="/"
+                href="/branch"
                 className="flex flex-row-reverse justify-center items-center"
               >
                 <p>شعبه</p>
@@ -128,7 +128,7 @@ const Header = () => {
 
             <li className="text-bodyXL group">
               <Link
-                href="/"
+                href="/menu"
                 className="flex flex-row-reverse justify-center items-center"
               >
                 <p>منو</p>
@@ -153,10 +153,10 @@ const Header = () => {
               <Link href="/"> اعطای نمایندگی</Link>
             </li>
             <li className="text-bodyXL">
-              <Link href="/">درباره ما</Link>
+              <Link href="/about-us">درباره ما</Link>
             </li>
             <li className="text-bodyXL">
-              <Link href="/">تماس با ما</Link>
+              <Link href="/contact-us">تماس با ما</Link>
             </li>
           </ul>
         </div>
