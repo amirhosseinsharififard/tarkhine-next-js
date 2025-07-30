@@ -36,15 +36,13 @@ const CustomeInput = ({
   active:border-main-primary
   disabled:border-neutral-gray7
   outline-none
-  placeholder-transparent
   text-neutral-gray8
   text-captionSM
-  peer
 `;
 
   const searchClasses = search
     ? "text-neutral-black placeholder-transparent border-none"
-    : " text-neutral-gray8 hover:border-neutral-gray8 ";
+    : " text-neutral-white hover:border-neutral-gray8 ";
 
   const [value, setValue] = useState("");
 
@@ -83,7 +81,7 @@ const CustomeInput = ({
             h-[141px]
             ${width ? "w-[704px]" : "w-[320px]"}
             ${classname ? classname : ""}
-            placeholder-neutral-gray8
+            placeholder-neutral-white
           `}
           disabled={disabled}
           dir="rtl"
@@ -103,7 +101,7 @@ const CustomeInput = ({
         type="text"
         id={model}
         name={model}
-        placeholder=" "
+        placeholder={placeHolder}
         className={clsx(
           baseClasses,
           errorClass,
@@ -118,7 +116,7 @@ const CustomeInput = ({
         value={value}
         onChange={handleInput}
       />
-      <label
+      {/* <label
         htmlFor={model}
         className={`
           absolute
@@ -140,7 +138,7 @@ const CustomeInput = ({
         `}
       >
         {placeHolder}
-      </label>
+      </label> */}
       {error && errorText && (
         <p className="text-right text-status-error text-xs mt-1 absolute left-0 bottom-[-20px] w-full text-captionSM">
           !{errorText}

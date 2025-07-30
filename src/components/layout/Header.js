@@ -4,10 +4,7 @@ import React from "react";
 //  image and svg
 import Image from "next/image";
 import menu from "../../../public/images/menu.svg";
-import profileIcon from "../../../public/images/ProfileIcon.svg";
 import logo from "../../../public/images/Logo.png";
-import headerIcon from "../../../public/images/HeaderIcon.svg";
-import searchIcon from "../../../public/images/Search.svg";
 import logoWeb from "../../../public/images/LogoWeb.svg";
 
 // icons
@@ -17,6 +14,8 @@ import { IoWalletOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { TfiLocationPin } from "react-icons/tfi";
 import { CiLogout } from "react-icons/ci";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
 
 const dropDownHoverList = {
   branches: ["اکباتان", "چالوس", "اقدسیه", "ونک"],
@@ -31,22 +30,29 @@ const dropDownHoverList = {
 };
 
 const Header = () => {
-  const login = false;
+  const login = true;
   return (
     <div className="w-full shadow-cards" dir="ltr">
-      <div className="max-w-screen-2xl flex justify-between items-center p-[20px] lg:pt-32  mx-auto ">
+      <div className="max-w-[1224px] flex justify-between items-center p-[20px] lg:pt-32  mx-auto ">
         <div className="flex items-center">
           <div className="group">
-            <Link href="/profile">
-              <Image
-                src={profileIcon}
-                alt="Profile Icon"
-                className="w-[24px] h-[24px] lg:w-[40px] lg:h-[40px]"
-              />
+            <Link
+              href="/profile"
+              className={`mx-[2px] lg:mx-[4px] w-[24px] h-[24px] lg:w-[58px]  lg:h-[40px] rounded-4 flex justify-center items-center ${
+                false
+                  ? "bg-main-primary text-neutral-white"
+                  : "bg-main-tint1 text-main-primary"
+              }
+              ${login && 'px-1 w-[34px] lg:px-2'}
+              `}
+
+            >
+              {login && <IoIosArrowDown className="group-hover:rotate-180 duration-300"/>}
+              <GoPerson className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] m-auto" />
             </Link>
 
-            <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-100 rounded-4">
-              {dropDownHoverList.profile.map((item, index) => {
+            <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-300 rounded-4">
+              {login && dropDownHoverList.profile.map((item, index) => {
                 return (
                   <React.Fragment key={index}>
                     <li className=" w-full text-bodySM">
@@ -64,19 +70,25 @@ const Header = () => {
             </ul>
           </div>
 
-          <Link href="/header" className="mx-[2px] lg:mx-[4px]">
-            <Image
-              src={headerIcon}
-              alt="Header Icon"
-              className="w-[24px] h-[24px] lg:w-[40px] lg:h-[40px]"
-            />
+          <Link
+            href="/header"
+            className={`mx-[2px] lg:mx-[4px] w-[24px] h-[24px] lg:w-[40px] lg:h-[40px] rounded-4 flex justify-center items-center ${
+              true
+                ? "bg-main-primary text-neutral-white"
+                : "bg-main-tint1 text-main-primary"
+            }`}
+          >
+            <AiOutlineShoppingCart className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] m-auto" />
           </Link>
-          <Link href="/search" className="hidden lg:block">
-            <Image
-              src={searchIcon}
-              alt="search Icon"
-              className="lg:w-[40px] lg:h-[40px]"
-            />
+          <Link
+            href="/search"
+            className={` hidden  mx-[2px] lg:mx-[4px] w-[24px] h-[24px] lg:w-[40px] lg:h-[40px] rounded-4 md:flex justify-center items-center ${
+              false
+                ? "bg-main-primary text-neutral-white"
+                : "bg-main-tint1 text-main-primary"
+            }`}
+          >
+            <CiSearch className="w-[16px] h-[16px] lg:w-[24px] lg:h-[24px] m-auto" />
           </Link>
         </div>
 
@@ -95,10 +107,10 @@ const Header = () => {
                 className="flex flex-row-reverse justify-center items-center"
               >
                 <p>شعبه</p>
-                <IoIosArrowDown className="group-hover:rotate-180 duration-100" />
+                <IoIosArrowDown className="group-hover:rotate-180 duration-300" />
               </Link>
               {/* shadow-[0_0_10px_rgba(0,0,0,0.15)] its dropShadow to hover list */}
-              <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-100 rounded-4">
+              <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-300 rounded-4">
                 {dropDownHoverList.branches.map((item, index) => {
                   return (
                     <React.Fragment key={index}>
@@ -120,9 +132,9 @@ const Header = () => {
                 className="flex flex-row-reverse justify-center items-center"
               >
                 <p>منو</p>
-                <IoIosArrowDown className="group-hover:rotate-180 duration-100" />
+                <IoIosArrowDown className="group-hover:rotate-180 duration-300" />
               </Link>
-              <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-100 rounded-4">
+              <ul className="absolute mt-1  bg-neutral-white z-[-10] group-hover:opacity-100 opacity-0  group-hover:z-10 w-[144px] shadow-[0_0_10px_rgba(0,0,0,0.15)] text-right duration-300 rounded-4">
                 {dropDownHoverList.menu.map((item, index) => {
                   return (
                     <React.Fragment key={index}>

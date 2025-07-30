@@ -9,6 +9,8 @@ import CustomeButton from "../../ui/CustomeButton";
 // icons
 import { IoClose } from "react-icons/io5";
 import { GrNext } from "react-icons/gr";
+
+
 import OtpInput from "../../common/OtpInput";
 import logoModalSearchBigSize from "@/public/images/search/LogoModalSearchBigSize.svg";
 
